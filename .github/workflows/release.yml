@@ -29,10 +29,10 @@ jobs:
         run: |
           pip install -r requirements.txt
           pip install --upgrade coveralls
-          pip show twine
           pip freeze
           pip install twine --upgrade
           pip install packaging --upgrade
+          pip freeze
       - name: Run tests
         run: coverage run -m unittest discover -s tests -t tests
 
